@@ -74,13 +74,19 @@ nav ul li a:hover:after {
   flex-wrap: wrap;
   justify-content: space-between;
   flex-basis: calc(33.33% - 20px);
+  
+  
   margin-bottom: 100px;
+}
+.bgimage:hover{
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
 }
 
 
 
 .first {
-  margin-bottom: 125px;
+  margin-bottom: 165px;
 }
 
 /* text css above hero image*/
@@ -227,6 +233,9 @@ h1 {
   background-image: linear-gradient(orange, tomato);
 
 }
+.link-button:hover{
+  transform: scale(1.1);
+}
 
 .top-banner {
   background-image: url(top-banner.png);
@@ -358,6 +367,19 @@ h1 {
   box-shadow: 0 3px 10px var(--primary-shadow);
   padding: 20px;
   margin: 10px;
+}
+.project-container:hover {
+  transform: scale(1.1);
+}
+.project-card {
+  /* existing styles here */
+  transition: transform 0.3s ease-in-out;
+}
+@media screen and (max-width: 768px) {
+  .project-container {
+    width: 80%;
+    margin: 20px auto;
+  }
 }
 
 .social-icons {
