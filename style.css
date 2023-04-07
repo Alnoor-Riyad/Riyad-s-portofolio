@@ -283,9 +283,7 @@ h1 {
 }
 
 
-footer p {
-  text-align: center;
-}
+
 
 /* services section css */
 .projects {
@@ -363,4 +361,26 @@ footer p {
 #footer {
   background-color: #808080;
   text-align: center;
+}
+.footer-2{
+  background: #24262b;
+  color: #fff;
+  text-align: center;
+  padding: 0em;
+}
+
+.footer-2 .footer-title{
+  font-size: 50px;
+  font-weight: 300;
+}
+
+.footer-2 p{
+  font-size: 20px;
+  margin-top: 0px;
+}
+
+.footer-2 p a{
+  color: #40c4ff;
+  font-weight: 300;
+  text-decoration: none;
 }
