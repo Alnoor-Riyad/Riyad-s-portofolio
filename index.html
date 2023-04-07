@@ -45,8 +45,8 @@
 
             <div class="content">
                 <span class="title">Freelancer </span>
-                <h1>Hi, I’m <span>Alnoor Riyad</span></h1>
-                <p>
+                <h1 id="gradual-text">Hi, I’m <span>Alnoor Riyad</span></h1>
+                <p id="gradual-text">
                     I’m a student of Daffodil international university .
                     Trying to be intelligent and accomplished engineer with an impressive height and a knack
                     for web development.
@@ -58,12 +58,12 @@
     </section>
     <section class="top-banner flexible-container ">
         <div class="half-width">
-            <h1>Welcome To</h1>
+            <h1 id="gradual-text">Welcome To</h1>
             <h1>
-                <span class="orange">Alnoor Riyad</span> World!
+                <span id="gradual-text" class="orange">Alnoor Riyad</span> World!
             </h1>
-            <h3>Meet me</h3>
-            <p>We hope you find what you're looking for and that you enjoy your stay.</p>
+            <h3 id="gradual-text">Meet me</h3>
+            <p id="gradual-text">We hope you find what you're looking for and that you enjoy your stay.</p>
             <a class="link-button" target="_blank" href="https://www.linkedin.com/in/alnoor-riyad-448614248/">Hire
                 Me</a>
         </div>
@@ -74,7 +74,7 @@
 
 
     <section class="skills" id="skills">
-        <h2 class="skill-header">My Top Skills</h2>
+        <h2 id="gradual-text" class="skill-header">My Top Skills</h2>
 
         <div class="skills-wrapper">
             <div class="first-set animate__animated animate__pulse">
@@ -182,6 +182,39 @@
         </div>
 
     </footer>
+    <script>
+
+        function animateText() {
+            const gradualText = document.getElementById('gradual-text');
+            const words = gradualText.textContent.split(' ');
+            gradualText.innerHTML = '';
+            for (let i = 0; i < words.length; i++) {
+                gradualText.innerHTML += `<span>${words[i]} </span>`;
+            }
+
+            let wordIndex = 0;
+            const spans = gradualText.getElementsByTagName('span');
+            const timer = setInterval(function () {
+                spans[wordIndex].style.opacity = 1;
+                wordIndex++;
+                if (wordIndex === spans.length) {
+                    wordIndex = 0;
+                    setTimeout(function () {
+                        for (let i = 0; i < spans.length; i++) {
+                            spans[i].style.opacity = 0;
+                        }
+                        animateText();
+                    }, 1000);
+                    clearInterval(timer);
+                }
+            }, 200);
+        }
+
+        animateText();
+
+
+
+    </script>
 
 
 </body>

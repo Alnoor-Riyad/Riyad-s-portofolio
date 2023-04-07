@@ -83,6 +83,10 @@ nav ul li a:hover:after {
   transition: transform 0.3s ease-in-out;
 }
 
+#gradual-text span {
+  opacity: 0;
+}
+
 
 
 .first {
